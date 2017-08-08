@@ -1,0 +1,187 @@
+/*Device Breakpoints*/
+$breakpoints: (
+  retina        : 320px, /*custom iphone retina */
+  extra-small   : 480px, /*phones*/
+  small         : 768px, /*tablets*/
+  medium        : 992px, /*desktop*/
+  large         : 1200px /*wide-screen*/
+);
+
+/*Media Query mixin*/
+@mixin mq($mq-breakpoint, $mq-breakpoints: $breakpoints) {
+
+  @if map-has-key($mq-breakpoints, $mq-breakpoint) {
+    $mq-breakpoint: map-get($mq-breakpoints, $mq-breakpoint);
+  }
+  @media screen and (min-width: #{$mq-breakpoint}) {
+    @content;
+  }
+}
+
+
+/*Page Background mixin*/
+@mixin page-background($url){
+  @include mq(retina){
+    background-size:100% 100%;
+    min-height:600px;
+    min-width:320px;
+    height:100vh;
+    
+    background-image: url($url);
+    max-width:100%;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size:cover;
+    background-repeat: no-repeat;
+    /*background-position: center center;*/
+    background-attachment: fixed;
+    padding-bottom:10%;
+    padding-top:5%;
+    /*vertical-align:middle;*/
+
+  }
+
+  
+  
+}
+
+/*Retina display*/
+@include mq(retina){
+  body{
+    padding-top:50px;
+    background-color:white;
+    font-family: 'Helvetica', sans-serif;
+    color:white;
+  }
+  
+  #imageMe{
+    margin-top:8%;
+    height:250px;
+    border-radius:200px;
+  }
+   
+  
+  
+  .center-block{
+  background-color:black;
+  opacity:0.7;
+  margin-top:12%;
+  padding:12px;
+  border-radius:5px;
+  //#width:50vw;
+  margin-bottom:10px;
+  width:95%;
+  &:hover{
+    box-shadow: 1px 1px 45px 10px #b3ddbc;
+    }  
+  }
+  
+  .portfolio-img{
+  width:100%;
+  margin:auto;
+  padding:10px;
+  height:auto;
+  }
+  
+}
+
+/*Smartphones */
+@include mq(extra-small){
+  body{
+    padding:0;
+  }
+}
+
+
+/*Small - Tablets*/
+@include mq(small){
+    .navbar{
+      text-align:center;      
+      margin-bottom:-5%;
+    }
+    .navbar-brand{
+      //#float:none;
+      margin-right:20px;
+      padding-top:10px;
+    }
+ 
+    .navbar-fixed-top {
+        position: relative;
+        top: auto;
+    }
+    
+  }
+
+
+.navbar-right{
+  margin-right:10px;
+}
+
+h1{
+  font-family: 'Lobster', sans-serif;
+  font-size: 4em;
+}
+
+
+#pageOne{
+ @include page-background("https://res.cloudinary.com/dh9jhi3qp/image/upload/v1498588595/photo-1491484815100-6f2890d04007_isb64m.png"); 
+    .btn-default{   
+    background-color:black;
+    font-size: 1.5em;
+    color:white;
+    opacity:0.6;
+    filter: alpha(opacity=60); /* For IE8 and earlier */
+  }
+
+}
+
+
+/*About section*/
+#pageTwo{
+@include page-background("https://images.unsplash.com/photo-1485609315582-cfffa02888e8?dpr=1&auto=format&fit=crop&w=1080&h=720&q=80&cs=tinysrgb&crop=&bg=");
+}
+
+/*Portfolio section*/
+#pageThree{
+  @include page-background("https://res.cloudinary.com/dh9jhi3qp/image/upload/c_scale,h_2376,w_4225/v1500612757/pexels-photo-492248_nrz8ed.jpg");
+  
+}
+
+#pageFour{
+  
+@include page-background("https://images.unsplash.com/photo-1495141929506-f34c93658f5d?dpr=1&auto=format&fit=crop&w=1080&h=1620&q=80&cs=tinysrgb&crop=&bg=")
+
+}
+
+/* Social Media Icon Styling */
+#facebookIcon{
+  color:rgb(59,89,163);
+}
+
+#githubIcon{
+  color:rgb(64,120,192);
+}
+
+#linkedinIcon{
+  color:#0077b5;
+}
+
+.about-me-text{
+  background-color:black;
+  opacity:0.7;
+  padding-right:2%;
+  margin-top:8%;
+}
+
+/*transform TESTING PHASE*/
+.grow:hover {
+  transform: scale(1.1);
+}
+
+.navbar-fixed-top
+{
+  position: fixed;
+
+}
+
