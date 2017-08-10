@@ -8,10 +8,19 @@
     background-color: white;
     font-family: 'Helvetica', sans-serif;
     color: white; }
+  #image-cropper {
+    width: 260px;
+    height: 260px; }
   #imageMe {
     margin-top: 8%;
-    height: 250px;
-    border-radius: 200px; }
+    height: 260px;
+    width: 266px;
+    border-radius: 50%; }
+  .about-me-text {
+    background-color: black;
+    opacity: 0.7;
+    padding-right: 2%;
+    margin-top: 10%; }
   .center-block {
     background-color: black;
     opacity: 0.7;
@@ -33,7 +42,7 @@
   body {
     padding: 0; } }
 
-/*Small - Tablets*/
+/*Small - Tablets 768px*/
 @media screen and (min-width: 768px) {
   .navbar {
     text-align: center;
@@ -43,7 +52,12 @@
     padding-top: 10px; }
   .navbar-fixed-top {
     position: relative;
-    top: auto; } }
+    top: auto; }
+  #imageMe {
+    margin-left: 90%;
+    height: 300px;
+    width: 300px;
+    border-radius: 50%; } }
 
 .navbar-right {
   margin-right: 10px; }
@@ -57,7 +71,6 @@ h1 {
     background-size: 100% 100%;
     min-height: 600px;
     min-width: 320px;
-    height: 100vh;
     background-image: url("https://res.cloudinary.com/dh9jhi3qp/image/upload/v1498588595/photo-1491484815100-6f2890d04007_isb64m.png");
     max-width: 100%;
     -webkit-background-size: cover;
@@ -79,13 +92,16 @@ h1 {
   filter: alpha(opacity=60);
   /* For IE8 and earlier */ }
 
+@media screen and (min-width: 768px) {
+  #pageOne {
+    height: 100vh; } }
+
 /*About section*/
 @media screen and (min-width: 320px) {
   #pageTwo {
     background-size: 100% 100%;
     min-height: 600px;
     min-width: 320px;
-    height: 100vh;
     background-image: url("https://images.unsplash.com/photo-1485609315582-cfffa02888e8?dpr=1&auto=format&fit=crop&w=1080&h=720&q=80&cs=tinysrgb&crop=&bg=");
     max-width: 100%;
     -webkit-background-size: cover;
@@ -100,31 +116,32 @@ h1 {
     /*vertical-align:middle;*/ } }
 
 /*Portfolio section*/
-@media screen and (min-width: 320px) {
-  #pageThree {
-    background-size: 100% 100%;
-    min-height: 600px;
-    min-width: 320px;
-    height: 100vh;
-    background-image: url("https://res.cloudinary.com/dh9jhi3qp/image/upload/c_scale,h_2376,w_4225/v1500612757/pexels-photo-492248_nrz8ed.jpg");
-    max-width: 100%;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    background-repeat: no-repeat;
-    /*background-position: center center;*/
-    background-attachment: fixed;
-    padding-bottom: 10%;
-    padding-top: 5%;
-    /*vertical-align:middle;*/ } }
+#pageThree {
+  height: auto; }
+  @media screen and (min-width: 320px) {
+    #pageThree {
+      background-size: 100% 100%;
+      min-height: 600px;
+      min-width: 320px;
+      background-image: url("https://res.cloudinary.com/dh9jhi3qp/image/upload/c_scale,h_2376,w_4225/v1500612757/pexels-photo-492248_nrz8ed.jpg");
+      max-width: 100%;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+      background-repeat: no-repeat;
+      /*background-position: center center;*/
+      background-attachment: fixed;
+      padding-bottom: 10%;
+      padding-top: 5%;
+      /*vertical-align:middle;*/ } }
 
+/*Contact Section*/
 @media screen and (min-width: 320px) {
   #pageFour {
     background-size: 100% 100%;
     min-height: 600px;
     min-width: 320px;
-    height: 100vh;
     background-image: url("https://images.unsplash.com/photo-1495141929506-f34c93658f5d?dpr=1&auto=format&fit=crop&w=1080&h=1620&q=80&cs=tinysrgb&crop=&bg=");
     max-width: 100%;
     -webkit-background-size: cover;
@@ -138,6 +155,9 @@ h1 {
     padding-top: 5%;
     /*vertical-align:middle;*/ } }
 
+#skillset {
+  color: black; }
+
 /* Social Media Icon Styling */
 #facebookIcon {
   color: #3b59a3; }
@@ -147,12 +167,6 @@ h1 {
 
 #linkedinIcon {
   color: #0077b5; }
-
-.about-me-text {
-  background-color: black;
-  opacity: 0.7;
-  padding-right: 2%;
-  margin-top: 8%; }
 
 /*transform TESTING PHASE*/
 .grow:hover {

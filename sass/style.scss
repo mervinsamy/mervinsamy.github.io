@@ -25,8 +25,6 @@ $breakpoints: (
     background-size:100% 100%;
     min-height:600px;
     min-width:320px;
-    height:100vh;
-    
     background-image: url($url);
     max-width:100%;
     -webkit-background-size: cover;
@@ -39,10 +37,8 @@ $breakpoints: (
     padding-bottom:10%;
     padding-top:5%;
     /*vertical-align:middle;*/
-
   }
 
-  
   
 }
 
@@ -55,21 +51,31 @@ $breakpoints: (
     color:white;
   }
   
+  #image-cropper{
+    width:260px;
+    height:260px;
+  }
+
   #imageMe{
     margin-top:8%;
-    height:250px;
-    border-radius:200px;
+    height:260px;
+    width:266px;
+    border-radius:50%;
   }
    
-  
-  
+  .about-me-text{
+  background-color:black;
+  opacity:0.7;
+  padding-right:2%;
+  margin-top:10%;
+}
+ 
   .center-block{
   background-color:black;
   opacity:0.7;
   margin-top:12%;
   padding:12px;
   border-radius:5px;
-  //#width:50vw;
   margin-bottom:10px;
   width:95%;
   &:hover{
@@ -94,7 +100,7 @@ $breakpoints: (
 }
 
 
-/*Small - Tablets*/
+/*Small - Tablets 768px*/
 @include mq(small){
     .navbar{
       text-align:center;      
@@ -110,6 +116,13 @@ $breakpoints: (
         position: relative;
         top: auto;
     }
+
+    #imageMe{
+    margin-left: 90%;
+    height:300px;
+    width:300px;
+    border-radius:50%;
+  }
     
   }
 
@@ -133,7 +146,8 @@ h1{
     opacity:0.6;
     filter: alpha(opacity=60); /* For IE8 and earlier */
   }
-
+  @include mq(small){height:100vh; 
+  }
 }
 
 
@@ -145,13 +159,17 @@ h1{
 /*Portfolio section*/
 #pageThree{
   @include page-background("https://res.cloudinary.com/dh9jhi3qp/image/upload/c_scale,h_2376,w_4225/v1500612757/pexels-photo-492248_nrz8ed.jpg");
-  
+  height:auto;
 }
 
-#pageFour{
-  
+/*Contact Section*/
+#pageFour{  
 @include page-background("https://images.unsplash.com/photo-1495141929506-f34c93658f5d?dpr=1&auto=format&fit=crop&w=1080&h=1620&q=80&cs=tinysrgb&crop=&bg=")
 
+}
+
+#skillset{
+  color:black;
 }
 
 /* Social Media Icon Styling */
@@ -167,12 +185,7 @@ h1{
   color:#0077b5;
 }
 
-.about-me-text{
-  background-color:black;
-  opacity:0.7;
-  padding-right:2%;
-  margin-top:8%;
-}
+
 
 /*transform TESTING PHASE*/
 .grow:hover {
