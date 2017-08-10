@@ -59,7 +59,7 @@ $breakpoints: (
   #imageMe{
     margin-top:8%;
     height:260px;
-    width:266px;
+    width:260px;
     border-radius:50%;
   }
    
@@ -68,8 +68,8 @@ $breakpoints: (
   opacity:0.7;
   padding-right:2%;
   margin-top:10%;
-}
- 
+    }
+
   .center-block{
   background-color:black;
   opacity:0.7;
@@ -96,6 +96,10 @@ $breakpoints: (
 @include mq(extra-small){
   body{
     padding:0;
+  }
+
+  #imageMe{
+    margin-left:30%;
   }
 }
 
@@ -124,8 +128,26 @@ $breakpoints: (
     border-radius:50%;
   }
     
-  }
+}
 
+/*Desktop*/
+@include mq(medium){
+  #imageMe{
+    margin-left:15%;  
+    margin-top:15%;
+  }
+  .about-me-text{
+    margin-left:20%;
+  }
+}
+
+/*Wide Screen*/
+@include mq(large){
+  #imageMe{
+    margin-left:30%;  
+    margin-top:30%;
+  }
+}
 
 .navbar-right{
   margin-right:10px;
@@ -187,7 +209,7 @@ h1{
 
 
 
-/*transform TESTING PHASE*/
+/*transform*/
 .grow:hover {
   transform: scale(1.1);
 }
