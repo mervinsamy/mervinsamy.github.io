@@ -1,6 +1,16 @@
+@font-face {
+  font-family: 'JaapokkiSubtract';
+  src: url('../css/fonts/jaapokkisubtract-regular.eot'); /* IE9 Compat Modes */
+  src: url('../css/fonts/jaapokkisubtract-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../css/fonts/jaapokkisubtract-regular.woff') format('woff'), /* Pretty Modern Browsers */
+       url('../css/fonts/jaapokkisubtract-regular.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('../css/fonts/jaapokkisubtract-regular.svg#JaapokkiSubtract') format('svg'); /* Legacy iOS */
+}
+
 /*Device Breakpoints*/
 $breakpoints: (
   retina        : 320px, /*custom iphone retina */
+  mobile-m      : 375px, /*mobile medium*/
   extra-small   : 480px, /*phones*/
   small         : 768px, /*tablets*/
   medium        : 992px, /*desktop*/
@@ -22,74 +32,295 @@ $breakpoints: (
 /*Page Background mixin*/
 @mixin page-background($url){
   @include mq(retina){
-    background-size:100% 100%;
-    min-height:600px;
-    min-width:320px;
     background-image: url($url);
-    max-width:100%;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
     background-size:cover;
     background-repeat: no-repeat;
-    /*background-position: center center;*/
-    background-attachment: fixed;
     padding-bottom:10%;
     padding-top:5%;
-    /*vertical-align:middle;*/
+    width:100%;
+    min-height:267px;
+  }
+
+  @include mq(small){
+    background-size:cover;
   }
 
   
 }
 
+html {
+  height:100%;
+  overflow:auto
+}
+
+.affix {
+      top: 0 !important;
+      width: 100%;
+      z-index: 1000 !important;
+      margin-left:5% !important;
+  }
+
+  .spacer-on{
+    min-height: 70px;
+  }
+
+  .padding-scroll-m {
+    padding-top:40px !important;
+    
+  }
+
 /*Retina display*/
 @include mq(retina){
+  .nav-section{
+    width:90%;
+    margin:0 auto;
+    padding:0;
+
+   }
+
+  .nav-justified > li {
+    display: table-cell; 
+    width: 33.33%;
+    margin:0 auto;
+
+   }
+
+  .navbar-collapse.collapse {
+  display: block!important; 
+  }
+
+  .navbar-nav>li, .navbar-nav {
+  float: left !important;
+  border-bottom:7px solid rgb(127,145,130);
+  margin-top:7px;
+  }
+
+  .navbar-nav.navbar-right:last-child {
+  margin-right: -15px !important;
+  }
+
+  .navbar-right {
+  float: right!important;
+  }
+
+
+  .navbar-nav {
+      > li > a{
+        border-top-left-radius: 1.5em;
+        border-top-right-radius: 1.5em;  
+        padding:0;
+        padding-top:5px;
+        min-height: 30px;
+        margin:0;
+        vertical-align: center;
+
+      }
+      /*About tab*/
+      > li:nth-child(1) {
+
+        > a {
+          color: white;
+          background-color: rgb(127,145,130);
+          text-shadow:1px 1px green;
+          &:hover{
+            background-color: rgb(127,145,130);
+            color: white;
+          }
+          &:focus{
+            background-color: rgb(127,145,130); 
+            color: white;
+          }
+        }
+
+        &.active {
+          > a {
+                color: white;
+                background-color: rgb(127,145,130);
+             &:hover {
+                color: white;
+                background-color: rgb(127,145,130);
+             }
+             &:focus{
+                color: white;
+                background-color: rgb(127,145,130);
+             }
+          }
+
+        }
+
+
+
+      }
+      /*Portfolio tab*/
+      > li:nth-child(2) {
+
+        > a {
+          color: white;
+          text-shadow:1px 1px purple;
+          background-color: rgb(139,111,134);
+          &:hover{
+            background-color: rgb(139,111,134);
+            color: white;
+          }
+          &:focus{
+            background-color: rgb(139,111,134); 
+            color: white;
+          }
+        }
+
+        &.active {
+          > a   {
+                color: white;
+                background-color: rgb(139,111,134);
+             &:hover {
+                color: white;
+                background-color: rgb(139,111,134);
+             }
+             &:focus{
+                color: white;
+                background-color: rgb(139,111,134);
+             }
+          }
+
+        }
+
+
+
+      }
+
+      /*Contact tab*/
+      > li:nth-child(3) {
+        > a {
+          color: white;
+          text-shadow:1px 1px black;
+          background-color: rgb(101,105,116);
+          &:hover{
+            background-color: rgb(101,105,116);
+            color: white;
+          }
+          &:focus{
+            background-color: rgb(101,105,116); 
+            color: white;
+          }
+        }
+
+        &.active {
+          > a {
+                color: white;
+                background-color: rgb(101,105,116);
+             &:hover {
+                color: white;
+                background-color: rgb(101,105,116);
+             }
+             &:focus{
+                color: white;
+                background-color: rgb(101,105,116);
+             }
+          }
+
+        }
+
+
+
+      }
+
+
+  }
+
   body{
-    padding-top:50px;
     background-color:white;
-    font-family: 'Helvetica', sans-serif;
+    font-family: 'Arial', sans-serif;
     color:white;
   }
   
   #image-cropper{
-    width:260px;
+    
     height:260px;
+    padding:0;
+    margin-left:07px;
   }
 
-  #imageMe{
-    margin-top:8%;
-    height:260px;
-    width:260px;
-    border-radius:50%;
+  #imageMe{   
+    height:auto;
+    width:100px;
+    padding-right:05px;
+    margin-left:6px; 
   }
    
   .about-me-text{
-  background-color:black;
   opacity:0.7;
-  padding-right:2%;
-  margin-top:10%;
-    }
+  padding-right:8%;
+  font-size:09px;
+  border-left:1px solid white;
+  }
 
-  .center-block{
-  background-color:black;
+  .hero-block{
   opacity:0.7;
-  margin-top:12%;
-  padding:12px;
+  margin-top:20%;
+  padding:0px;
   border-radius:5px;
   margin-bottom:10px;
-  width:95%;
-  &:hover{
-    box-shadow: 1px 1px 45px 10px #b3ddbc;
-    }  
+  width:100%;
+  letter-spacing: 2px;
+
+
+    h1{
+      font-size:20px;
+      margin-bottom:-5px;
+    }
+
+    #typed{
+    font-size:12px;
+    }
+
+  }
+
+  .button-list{
+    margin-left: 11px;
+    font-size:6px;
   }
   
+  .tab-section{
+  width:90%;
+  margin: 0 auto; 
+  display:block;
+  position:relative;
+    h2{
+      margin-top:0;
+    }
+  }
+
+  /*TEST*/
+  .navbar-nav{
+    margin: 0 0;
+  }
+
+  .navbar-default{
+    /*margin-left: 9.6%;*/
+    /*margin-left:2.2em;*/
+    padding:0;
+    background-color: transparent;
+    border:none;
+    margin-top:-8px;
+    margin-bottom:0;
+    padding-top:0;
+    height: 45px;
+    
+    bottom:0;
+  }
+
+}
+
   .portfolio-img{
   width:100%;
   margin:auto;
   padding:10px;
   height:auto;
+  min-height:250px;
   }
-  
+
+@include mq(mobile-m){
+ 
 }
 
 /*Smartphones */
@@ -99,7 +330,7 @@ $breakpoints: (
   }
 
   #imageMe{
-    margin-left:30%;
+    width:120px;
   }
 }
 
@@ -107,26 +338,24 @@ $breakpoints: (
 /*Small - Tablets 768px*/
 @include mq(small){
     .navbar{
-      text-align:center;      
-      margin-bottom:-5%;
-    }
-    .navbar-brand{
-      //#float:none;
-      margin-right:20px;
-      padding-top:10px;
-    }
- 
-    .navbar-fixed-top {
-        position: relative;
-        top: auto;
+      z-index:1000;
     }
 
     #imageMe{
-    margin-left: 90%;
-    height:300px;
-    width:300px;
-    border-radius:50%;
+ 
+    }
+
+   .hero-block{
+    width:40%;
+    margin-top:15em;
+    font-size:20px;
+    &:hover{
+    box-shadow: 1px 1px 45px 10px #b3ddbc;
+    }    
   }
+     .button-list{
+    margin-left: 20px;
+   }
     
 }
 
@@ -139,6 +368,18 @@ $breakpoints: (
   .about-me-text{
     margin-left:20%;
   }
+  .hero-block{
+    h1{
+      font-size:62px;
+    }
+  }
+
+   .tab-section{
+  width:90%;
+  margin: auto; 
+  display:block;
+  position:relative;
+  }
 }
 
 /*Wide Screen*/
@@ -149,45 +390,52 @@ $breakpoints: (
   }
 }
 
-.navbar-right{
-  margin-right:10px;
-}
-
 h1{
-  font-family: 'Lobster', sans-serif;
+  font-family: 'JaapokkiSubtract', sans-serif;
   font-size: 4em;
+  margin:0;
+  padding:0;
 }
 
 
-#pageOne{
- @include page-background("https://res.cloudinary.com/dh9jhi3qp/image/upload/v1498588595/photo-1491484815100-6f2890d04007_isb64m.png"); 
-    .btn-default{   
+#home{
+@include page-background("../images/heroimage.png");
+   .btn-default{   
     background-color:black;
+    border-radius: 25px;
     font-size: 1.5em;
     color:white;
     opacity:0.6;
+    font-family:Arial;
     filter: alpha(opacity=60); /* For IE8 and earlier */
   }
-  @include mq(small){height:100vh; 
+
+  @include mq(retina){
+    margin-bottom:-37px;
+    position: relative;
+    min-height: 300px;
   }
+
 }
 
-
 /*About section*/
-#pageTwo{
-@include page-background("https://images.unsplash.com/photo-1485609315582-cfffa02888e8?dpr=1&auto=format&fit=crop&w=1080&h=720&q=80&cs=tinysrgb&crop=&bg=");
+#about{
+  background-color: rgb(127,145,130); 
+  padding-top: 25px;
+  margin-top: 0;
+  min-height: 500px;
 }
 
 /*Portfolio section*/
-#pageThree{
-  @include page-background("https://res.cloudinary.com/dh9jhi3qp/image/upload/c_scale,h_2376,w_4225/v1500612757/pexels-photo-492248_nrz8ed.jpg");
-  height:auto;
+#portfolio{
+ background-color: rgb(139,111,134); 
+ border:1px solid red;
 }
 
 /*Contact Section*/
-#pageFour{  
-@include page-background("https://images.unsplash.com/photo-1495141929506-f34c93658f5d?dpr=1&auto=format&fit=crop&w=1080&h=1620&q=80&cs=tinysrgb&crop=&bg=")
-
+#contact{  
+background-color: rgb(101,105,116);
+min-height: 500px;
 }
 
 #skillset{
@@ -209,9 +457,9 @@ h1{
 
 
 
-/*transform*/
+/**  ANIMATIONS  **/
 .grow:hover {
-  transform: scale(1.1);
+  transform: scale(1.05);
 }
 
 
@@ -234,10 +482,12 @@ h1{
   top: 0;
 }
 
-.navbar-fixed-top
-{
-  position: fixed;
 
+.item{
+  margin:4px;
+  padding:1.1em;
+  border-radius: 100%;
+  background-color: white;
 }
 
 .text-overlay{
