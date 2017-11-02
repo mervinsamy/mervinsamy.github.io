@@ -13,7 +13,8 @@ $breakpoints: (
   extra-small   : 480px, /*phones*/
   small         : 768px, /*tablets*/
   medium        : 992px, /*desktop*/
-  large         : 1200px /*wide-screen*/
+  large         : 1200px, /*wide-screen*/
+  extra-large   : 1440px /*ultra wide screen*/
 );
 
 /*Media Query mixin*/
@@ -288,8 +289,8 @@ html {
   }
 
   .button-list{
-    margin-left: 11px;
-    font-size:6px;
+    margin-top:5px;
+    font-size:5px;
   }
   
   .tab-section{
@@ -350,6 +351,10 @@ html {
   margin-left:5px;
   padding-right:0;
   margin-bottom:20px;
+ }
+
+ fieldset {
+  margin:10px;
  }
 
 }
@@ -414,7 +419,6 @@ html {
   }
 
    .button-list{
-    margin-left: 20px;
     font-size:12px;
    }
     
@@ -440,8 +444,7 @@ html {
   }
 
    .button-list{
-    margin-left: 40px;
-    font-size:12px;
+    font-size:12.5px;
    }
 
    #home {
@@ -477,8 +480,18 @@ html {
 
  .hero-block{
     margin-top:34%;
+    margin-left:1%;
     h1{
       font-size:62px;
+    }
+  }
+}
+
+@include mq(extra-large){
+  #home{
+    .container{
+      margin-left: 5%;
+      margin-right: 5%;
     }
   }
 }

@@ -102,7 +102,15 @@ $(document).ready(function () {
 
     });
 
-    
+
+
+    /*$.ajax({
+      url: "https://formspree.io/rionyamato@yahoo.com", 
+      method: "POST",
+      data: {message: "hello!"},
+      dataType: "json"
+    });*/
+
 
      var pathname = window.location.pathname;
      console.log("pathname: " + pathname);

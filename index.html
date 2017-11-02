@@ -27,13 +27,18 @@
     <div class="hero-block">
       <h1>MERVIN SAMY</h1>
       <span id="typed"></span>
+    <div class="button-list">
+      <a class="btn grow btn-default " href="#"><i class="fa fa-github" aria-hidden="true" id="githubIcon"></i> Github</a>
+      <a class="btn grow btn-default" href="https://www.linkedin.com/in/mervin-samy" target="_blank"><i class="fa fa-linkedin-square" aria-hidden="true" id="linkedinIcon"></i> LinkedIn</a>
+      <a class="btn grow btn-default" href="#"><i class="fa fa-codepen" aria-hidden="true" id="facebookIcon"></i> Codepen</a>
+    </div>
     </div>
   </div>
-  <div class="button-list">
+  <!--div class="button-list">
     <a class="btn grow btn-default " href="#"><i class="fa fa-github" aria-hidden="true" id="githubIcon"></i> Github</a>
     <a class="btn grow btn-default" href="https://www.linkedin.com/in/mervin-samy" target="_blank"><i class="fa fa-linkedin-square" aria-hidden="true" id="linkedinIcon"></i> LinkedIn</a>
     <a class="btn grow btn-default" href="#"><i class="fa fa-codepen" aria-hidden="true" id="facebookIcon"></i> Codepen</a>
-  </div>
+  </div-->
 </section>
 
 <div id="nav">
@@ -214,6 +219,25 @@
   <div class="spacer-on">
   </div>
   <h2 class="text-center">Contact</h2>
+  <form action="https://formspree.io/rionyamato@yahoo.com"
+      method="POST">
+    <fieldset class="field" style="color:black">
+      
+      <input type="text" name="name" placeholder="Your Name" id="Name" required>
+      <label class="label" for="name"><span class="label-content">Your name</span></label>
+      
+      <input type="email" name="_replyto" placeholder="Your email">
+      <label class="label" for="_replyto"><span class="label-content">Your email</span></label>
+
+      <textarea class="input" name="message" row="1" placeholder="Message" id="message" required></textarea>
+      <label class="label" for="message"><span class="label-content">Your message</span></label>
+      
+      <input type="text" name="_gotcha" style="display:none" />
+      <input class="hidden" type="hidden" name="_subject" value="Message via github pages">
+      
+      <input type="submit" value="Send">
+    </fieldset>
+</form>
 </section>
 
 
