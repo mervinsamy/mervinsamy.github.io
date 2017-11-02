@@ -29,7 +29,8 @@ $(document).ready(function () {
 
    var typed = new Typed('#typed', {
     strings: [ "WEB DEVELOPER.",
-               "WEB DESIGNER."],
+               "WEB DESIGNER.",
+               "SOFTWARE ENGINEER."],
     typeSpeed: 30,
     backSpeed: 0,
     loop: true
@@ -75,20 +76,29 @@ $(document).ready(function () {
           /*$("#about").css('padding-top' , '125px');*/
           $(".spacer").addClass('spacer-on');
           $("#about").addClass('padding-scroll-m');
-        } else {
+        } 
+        else if (($(window).width() >= 768 && $(window).width() < 1024) && (fromTop >= 600)) {
+          console.log('pasok 768');
+          
+          $(".spacer").addClass('spacer-on');
+          $("#about").addClass('padding-scroll-m');
+        }
+        else {
+          console.log('labas');
           $(".spacer").removeClass('spacer-on');
           $("#about").removeClass('padding-scroll-m');
         }
 
+        /*
         if (($(window).width() > 768) && (fromTop >= 500)) {
           console.log('pasok');
-          /*$("#about").css('padding-top' , '125px');*/
+          
           $(".spacer").addClass('spacer-on');
           $("#about").addClass('padding-scroll-m');
         } else {
           $(".spacer").removeClass('spacer-on');
           $("#about").removeClass('padding-scroll-m');
-        }
+        }*/
 
     });
 

@@ -10,7 +10,6 @@
 /*Device Breakpoints*/
 $breakpoints: (
   retina        : 320px, /*custom iphone retina */
-  mobile-m      : 375px, /*mobile medium*/
   extra-small   : 480px, /*phones*/
   small         : 768px, /*tablets*/
   medium        : 992px, /*desktop*/
@@ -60,14 +59,7 @@ html {
       margin-left:5% !important;
   }
 
-  .spacer-on{
-    min-height: 70px;
-  }
 
-  .padding-scroll-m {
-    padding-top:40px !important;
-    
-  }
 
 /*Retina display*/
 @include mq(retina){
@@ -232,6 +224,26 @@ html {
     font-family: 'Arial', sans-serif;
     color:white;
   }
+
+  #home{
+    @include page-background("../images/heroimage.png");
+     .btn-default{   
+      background-color:black;
+      border-radius: 25px;
+      font-size: 1.5em;
+      color:white;
+      opacity:0.6;
+      font-family:Arial;
+      min-width: 70px;
+      filter: alpha(opacity=60); /* For IE8 and earlier */
+    }
+
+    margin-bottom:-37px;
+    position: relative;
+    min-height: 300px;
+  
+  }
+
   
   #image-cropper{
     
@@ -242,21 +254,21 @@ html {
 
   #imageMe{   
     height:auto;
-    width:100px;
-    padding-right:05px;
-    margin-left:6px; 
+    padding-right:0px;
+    margin-left:7px; 
   }
    
   .about-me-text{
   opacity:0.7;
   padding-right:8%;
+  padding-left:7px;
   font-size:09px;
   border-left:1px solid white;
   }
 
   .hero-block{
   opacity:0.7;
-  margin-top:20%;
+  margin-top:45%;
   padding:0px;
   border-radius:5px;
   margin-bottom:10px;
@@ -309,9 +321,16 @@ html {
     bottom:0;
   }
 
-}
+    .spacer-on{
+    min-height: 65px;
+  }
 
-  .portfolio-img{
+  .padding-scroll-m {
+    padding-top:45px !important;
+    
+  }
+
+ .portfolio-img{
   width:100%;
   margin:auto;
   padding:10px;
@@ -319,9 +338,23 @@ html {
   min-height:250px;
   }
 
-@include mq(mobile-m){
- 
+
+.item{
+  margin:4px;
+  padding:1.1em;
+  border-radius: 50%;
+  background-color: white;
 }
+
+ .skills-group{
+  margin-left:5px;
+  padding-right:0;
+  margin-bottom:20px;
+ }
+
+}
+
+
 
 /*Smartphones */
 @include mq(extra-small){
@@ -329,9 +362,25 @@ html {
     padding:0;
   }
 
+.about-me-text{
+  font-size:12px;
+  padding-right: 15px;
+ }
+
   #imageMe{
-    width:120px;
+   
   }
+
+ .item{
+  margin:4px;
+  padding:1em;
+  
+ }
+ .skills-group{
+  margin-left:20px;
+  padding-right:0;
+  margin-bottom:20px;
+ }
 }
 
 
@@ -341,20 +390,32 @@ html {
       z-index:1000;
     }
 
-    #imageMe{
- 
+    .about-me-text{
+      font-size:14px;
     }
 
-   .hero-block{
-    width:40%;
-    margin-top:15em;
-    font-size:20px;
-    &:hover{
-    box-shadow: 1px 1px 45px 10px #b3ddbc;
-    }    
+  #home {
+    min-height:600px !important;
   }
-     .button-list{
+  .hero-block{
+  margin-top:40%;
+  border-radius:5px;
+  width:100%;
+  letter-spacing: 2px;
+    h1{
+      font-size:36px;
+      margin-bottom:-5px;
+    }
+
+    #typed{
+    font-size:21px;
+    }
+
+  }
+
+   .button-list{
     margin-left: 20px;
+    font-size:12px;
    }
     
 }
@@ -366,13 +427,28 @@ html {
     margin-top:15%;
   }
   .about-me-text{
-    margin-left:20%;
+    margin-left:45px;
+    padding-left: 25px;
+    padding-right: 10px;
+    font-size:16px;
   }
   .hero-block{
+    margin-top:34%;
     h1{
       font-size:62px;
     }
   }
+
+   .button-list{
+    margin-left: 40px;
+    font-size:12px;
+   }
+
+   #home {
+    .btn-default {
+      min-width:144px;
+    }
+   }
 
    .tab-section{
   width:90%;
@@ -380,6 +456,16 @@ html {
   display:block;
   position:relative;
   }
+
+  .navbar-nav>li, .navbar-nav {
+    border-bottom:13px solid rgb(127,145,130);
+  }
+
+  .navbar-nav > li > a {
+    font-size: 22px;
+}
+
+
 }
 
 /*Wide Screen*/
@@ -387,6 +473,13 @@ html {
   #imageMe{
     margin-left:30%;  
     margin-top:30%;
+  }
+
+ .hero-block{
+    margin-top:34%;
+    h1{
+      font-size:62px;
+    }
   }
 }
 
@@ -435,7 +528,7 @@ h1{
 /*Contact Section*/
 #contact{  
 background-color: rgb(101,105,116);
-min-height: 500px;
+min-height: 900px;
 }
 
 #skillset{
@@ -483,12 +576,6 @@ min-height: 500px;
 }
 
 
-.item{
-  margin:4px;
-  padding:1.1em;
-  border-radius: 100%;
-  background-color: white;
-}
 
 .text-overlay{
   top:50%;
