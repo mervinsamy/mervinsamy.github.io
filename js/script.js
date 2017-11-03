@@ -39,7 +39,9 @@ $(document).ready(function () {
 
    $('.navbar').affix({
       offset: {
-        top: $('#home').outerHeight()
+        top: function() {
+        return $('#home').outerHeight();
+        }
       }
    }); 
 
@@ -112,7 +114,8 @@ $(document).ready(function () {
     });*/
 
 
-     var pathname = window.location.pathname;
-     console.log("pathname: " + pathname);
+     /*var pathname = window.location.pathname;*/
+     /*console.log("pathname: " + pathname);*/
+     console.log($('#home').outerHeight());
  });
 
