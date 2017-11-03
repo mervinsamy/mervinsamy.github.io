@@ -227,7 +227,7 @@ html {
   }
 
   #home{
-    @include page-background("../images/heroimage.png");
+    @include page-background("../images/heroimage-min.png");
      .btn-default{   
       background-color:black;
       border-radius: 25px;
@@ -354,8 +354,11 @@ html {
  }
 
  fieldset {
-  margin:10px;
+  margin:25px;
+  
  }
+
+
 
 }
 
@@ -421,6 +424,11 @@ html {
    .button-list{
     font-size:12px;
    }
+
+   .item{
+    padding:1.4em;
+    margin:5px;
+   }
     
 }
 
@@ -466,7 +474,8 @@ html {
 
   .navbar-nav > li > a {
     font-size: 22px;
-}
+  }
+
 
 
 }
@@ -474,8 +483,8 @@ html {
 /*Wide Screen*/
 @include mq(large){
   #imageMe{
-    margin-left:30%;  
-    margin-top:30%;
+    margin-left:10%;  
+    margin-top:0%;
   }
 
  .hero-block{
@@ -503,9 +512,9 @@ h1{
   padding:0;
 }
 
-
+/*
 #home{
-@include page-background("../images/heroimage.png");
+@include page-background("../images/heroimage-min.png");
    .btn-default{   
     background-color:black;
     border-radius: 25px;
@@ -513,16 +522,16 @@ h1{
     color:white;
     opacity:0.6;
     font-family:Arial;
-    filter: alpha(opacity=60); /* For IE8 and earlier */
-  }
-
+    filter: alpha(opacity=60); /* For IE8 and earlier 
+  }*/
+/*
   @include mq(retina){
     margin-bottom:-37px;
     position: relative;
     min-height: 300px;
   }
 
-}
+}*/
 
 /*About section*/
 #about{
@@ -595,3 +604,4 @@ min-height: 900px;
   transform:translateY(-50%);
   position:relative;
 }
+
