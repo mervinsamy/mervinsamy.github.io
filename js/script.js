@@ -74,19 +74,14 @@ $(document).ready(function () {
         var fromTop = $(window).scrollTop();
         console.log(fromTop);
         if (($(window).width() < 768) && (fromTop >= 300)) {
-          console.log('pasok');
-          /*$("#about").css('padding-top' , '125px');*/
           $(".spacer").addClass('spacer-on');
           $("#about").addClass('padding-scroll-m');
         } 
         else if (($(window).width() >= 768 && $(window).width() < 1024) && (fromTop >= 600)) {
-          console.log('pasok 768');
-          
           $(".spacer").addClass('spacer-on');
           $("#about").addClass('padding-scroll-m');
         }
         else {
-          console.log('labas');
           $(".spacer").removeClass('spacer-on');
           $("#about").removeClass('padding-scroll-m');
         }
