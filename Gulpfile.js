@@ -10,7 +10,7 @@ var output = './css/';
 
 var sassOptions = {
  errLogToConsole: true,
- outputStyle: 'expanded'
+ outputStyle: 'compressed' /*compressed on deploy*/
 };
 
 /*Sass Tasks*/
@@ -36,8 +36,3 @@ gulp.task('watch', function(){
 
 
 gulp.task('default', ['sass', 'watch']);
-
-
-//gulp.task('default', function(){
-//	gulp.watch('./sass/**/*.scss',['sass']);
-//});

@@ -15,7 +15,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" type="text/javaScript"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" type="text/javaScript"></script>
 <script src="js/typed.min.js" type="text/javaScript"></script>
-<script src="js/script.js" type="text/javaScript"></script>
+
 
 
 <title>Mervin Samy</title>
@@ -39,9 +39,9 @@
 <div id="nav">
     <nav class="navbar nav-section navbar-default" data-spy="affix" data-offset-top="">
       <ul class="nav navbar-nav nav-justified" role="tablist">
-        <li role="presentation" class="active"><a href="#about">About</a></li>
-        <li role="presentation"><a href="#portfolio">Portfolio</a></li>
-        <li role="presentation"><a href="#contact">Contact</a></li>
+        <li role="presentation" class="active"><a href="#about" rel="nofollow">About</a></li>
+        <li role="presentation"><a href="#portfolio" rel="nofollow">Portfolio</a></li>
+        <li role="presentation"><a href="#contact" rel="nofollow">Contact</a></li>
       </ul>
     </nav>
 </div>
@@ -215,19 +215,20 @@
   <h2 class="text-center">Contact</h2>
   <form action="https://formspree.io/rionyamato@yahoo.com"
       method="POST" style="color:black">
-    <fieldset class="field" >    
-      <input type="text" name="name" placeholder="Your Name" id="Name" required>
-      <label class="label" for="name"><span class="label-content">Your name</span></label>
+    <fieldset class="field half-width" >   
+      <label class="label" for="name"><span class="label-content">Name</span></label> 
+      <input type="text" name="name" placeholder="Your Name" id="Name" required>  
     </fieldset>
 
-    <fieldset class="field" >  
-      <input type="email" name="_replyto" placeholder="Your email">
-      <label class="label" for="_replyto"><span class="label-content">Your email</span></label>
+    <fieldset class="field half-width" >
+      <label class="label" for="_replyto"><span class="label-content">Email</span></label>  
+      <input type="email" name="_replyto" id="Email" placeholder="Your email">
+      
     </fieldset>
 
     <fieldset class="field">  
-      <textarea class="input" name="message" row="1" placeholder="Message" id="message" required></textarea>
-      <label class="label" for="message"><span class="label-content">Your message</span></label>
+      <label class="label" for="message"><span class="label-content">Message</span></label>
+      <textarea class="input" name="message" rows="5" placeholder="Message" id="message" required></textarea>
     </fieldset>
       
 
@@ -243,6 +244,7 @@
 
 
 
-
+<script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
+<script src="js/script.js" type="text/javaScript"></script>
 </body>
 </html>

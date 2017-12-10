@@ -303,7 +303,6 @@ html {
     }
   }
 
-  /*TEST*/
   .navbar-nav{
     margin: 0 0;
   }
@@ -353,16 +352,46 @@ html {
   margin-bottom:20px;
  }
 
+ /*fieldset {
+  margin:25px;  
+ }*/
+
+
+ /*Contact Section*/
+ #contact {
+  margin:0 auto;
+
+ }
+
+ /*form {
+  width:80%;
+  margin:0 auto;
+
+ }*/
+ .label{
+  display: block;
+  margin-bottom: 0.5em;
+  line-height: 1.5;
+ }
+
+ input, textarea{
+  display: block;
+  margin:0 auto;
+  width: 80%;
+ }
+
  fieldset {
-  margin:25px;
-  
+  width: 100%;
+ }
+ .half-width{
+  padding:0;
+ }
+ .field {
+  margin-bottom:1em;
  }
 
 
-
 }
-
-
 
 /*Smartphones */
 @include mq(extra-small){
@@ -429,7 +458,10 @@ html {
     padding:1.4em;
     margin:5px;
    }
-    
+
+   form {
+    font-size: 1.4em;
+   }    
 }
 
 /*Desktop*/
@@ -482,8 +514,9 @@ html {
 
 /*Wide Screen*/
 @include mq(large){
+
   #imageMe{
-    margin-left:10%;  
+    margin-left:20%;  
     margin-top:0%;
   }
 
@@ -512,27 +545,6 @@ h1{
   padding:0;
 }
 
-/*
-#home{
-@include page-background("../images/heroimage-min.png");
-   .btn-default{   
-    background-color:black;
-    border-radius: 25px;
-    font-size: 1.5em;
-    color:white;
-    opacity:0.6;
-    font-family:Arial;
-    filter: alpha(opacity=60); /* For IE8 and earlier 
-  }*/
-/*
-  @include mq(retina){
-    margin-bottom:-37px;
-    position: relative;
-    min-height: 300px;
-  }
-
-}*/
-
 /*About section*/
 #about{
   background-color: rgb(127,145,130); 
@@ -549,7 +561,7 @@ h1{
 /*Contact Section*/
 #contact{  
 background-color: rgb(101,105,116);
-min-height: 900px;
+min-height: 800px;
 }
 
 #skillset{
@@ -571,7 +583,7 @@ min-height: 900px;
 
 
 
-/**  ANIMATIONS  **/
+/*  ANIMATIONS  */
 .grow:hover {
   transform: scale(1.05);
 }
@@ -585,6 +597,7 @@ min-height: 900px;
   overflow: hidden;
   width:100%;
   transition: 0.5s ease;
+  border-radius: 50%;
 }
 
 .item-overlay.bottom {

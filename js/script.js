@@ -112,5 +112,11 @@ $(document).ready(function () {
      /*var pathname = window.location.pathname;*/
      /*console.log("pathname: " + pathname);*/
      console.log($('#home').outerHeight());
- });
 
+
+     /*Fade In Effect of objects*/
+     window.sr = ScrollReveal( {reset: true, delay: 200});
+     sr.reveal('#imageMe', {origin: 'left', scale: 0.5});
+     sr.reveal(".item", {origin: 'right'});
+     sr.reveal(".portfolio-img");
+ });
