@@ -598,6 +598,7 @@ min-height: 800px;
   width:100%;
   transition: 0.5s ease;
   border-radius: 50%;
+
 }
 
 .item-overlay.bottom {
@@ -608,8 +609,6 @@ min-height: 800px;
 .item:hover .item-overlay.bottom {
   top: 0;
 }
-
-
 
 .text-overlay{
   top:50%;

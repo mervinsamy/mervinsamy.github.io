@@ -29,7 +29,6 @@ $(document).ready(function () {
 
    var typed = new Typed('#typed', {
     strings: [ "WEB DEVELOPER.",
-               "WEB DESIGNER.",
                "SOFTWARE ENGINEER."],
     typeSpeed: 30,
     backSpeed: 0,
