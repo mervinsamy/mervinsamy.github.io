@@ -308,8 +308,6 @@ html {
   }
 
   .navbar-default{
-    /*margin-left: 9.6%;*/
-    /*margin-left:2.2em;*/
     padding:0;
     background-color: transparent;
     border:none;
@@ -352,9 +350,6 @@ html {
   margin-bottom:20px;
  }
 
- /*fieldset {
-  margin:25px;  
- }*/
 
 
  /*Contact Section*/
@@ -389,6 +384,10 @@ html {
  .field {
   margin-bottom:1em;
  }
+  #send {
+    margin-left:0.4em;
+    width:95%;
+  }
 
 
 }
@@ -461,7 +460,12 @@ html {
 
    form {
     font-size: 1.4em;
-   }    
+   }
+
+  #send {
+      margin-left:1em;
+      width:95%;
+  }
 }
 
 /*Desktop*/
@@ -508,6 +512,10 @@ html {
     font-size: 22px;
   }
 
+  #send {
+    margin-left:5em;
+    width:20%;
+  }
 
 
 }
