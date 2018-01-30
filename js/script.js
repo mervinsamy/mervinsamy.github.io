@@ -35,7 +35,7 @@ $(document).ready(function () {
     loop: true
 
     });
-
+   /* Dynamic navbar offset 
    $('.navbar').affix({
       offset: {
         top: function() {
@@ -43,7 +43,7 @@ $(document).ready(function () {
         }
       }
    }); 
-
+   */
 
     /*Temp Fix*/
       /* $(window).scroll(function () {
